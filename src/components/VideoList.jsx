@@ -1,4 +1,5 @@
-import exampleVideoData from '/hrsf126-recast.ly/src/data/exampleVideoData.js';
+import VideoListEntry from './VideoListEntry.jsx';
+import exampleVideoData from '../data/exampleVideoData.js';
 
 var VideoList = (props) => {
 
@@ -11,11 +12,8 @@ var VideoList = (props) => {
       {videoListEntries}
     </div>
   );
+
 };
-
-
-
-
 
 
 

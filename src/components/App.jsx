@@ -1,5 +1,5 @@
-import exampleVideoData from '/hrsf126-recast.ly/src/data/exampleVideoData.js';
-
+import exampleVideoData from '../data/exampleVideoData.js';
+// console.log(exampleVideoData);
 
 var App = () => (
   <div>
@@ -18,6 +18,8 @@ var App = () => (
     </div>
   </div>
 );
+
+
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
