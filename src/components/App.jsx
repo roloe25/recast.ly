@@ -1,3 +1,6 @@
+import exampleVideoData from '/hrsf126-recast.ly/src/data/exampleVideoData.js';
+
+
 var App = () => (
   <div>
     <nav className="navbar">
