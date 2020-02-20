@@ -1,15 +1,24 @@
 import exampleVideoData from '../data/exampleVideoData.js';
-import VideoListEntry from './VideoListEntry.js';
+// import VideoListEntry from './VideoListEntry.js';
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 
-console.log(exampleVideoData);
-
+console.log(exampleVideoData)
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentVid: exampleVideoData[0],
+      videos: exampleVideoData
+    }
   }
+  handleClick (video) {
+    this.state({
+      currentVid: video
+    });
+  }
+
   render () {
     return (
       <div>
@@ -20,10 +29,12 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayer video={exampleVideoData[0]}/>
+            <VideoPlayer video={this.state.currentVid}/>
           </div>
           <div className="col-md-5">
-            <VideoList videos={exampleVideoData}/>
+            <VideoList
+              onClick={this.handleClick.bind(this)}
+              videos={this.state.videos}/>
           </div>
         </div>
       </div>
